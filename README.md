@@ -82,3 +82,53 @@ System.out.println("The cgpa is:"+cgpa);
 } 
  
 } 
+
+// WAP in Java to print currencies converted from 1 dollar 
+
+class CurrencyConverter {
+
+    int rupee=63;
+
+    int dirham=3;
+
+    int brazilian = 3;
+
+    int chilean_peso = 595;
+
+    int mexican_peso = 18;
+
+    int _yen = 107;
+
+    int $australian = 2;
+
+    int dollar=0;
+
+    int Rupee;
+
+    void printCurrencies(){
+
+        System.out.println("1 dollar in rupee: " + rupee);
+
+        System.out.println("1 dollar in dirham: " + dirham);
+
+        System.out.println("1 dollar in brazilian: "+brazilian);
+
+        System.out.println("1 dollar in chilean peso: "+chilean_peso);
+
+        System.out.println("1 dollar in mexican peso: "+mexican_peso);
+
+        System.out.println("1 dollar in yen: "+_yen);
+
+        System.out.println("1 dollar in australian: "+$australian);
+
+    }
+
+}
+class Main{
+    
+    public static void main(String[] args)
+    {
+        CurrencyConverter cc=new CurrencyConverter();
+        cc.printCurrencies();
+    }
+}
