@@ -132,3 +132,155 @@ class Main{
         cc.printCurrencies();
     }
 }
+
+// WAP in Java to create a shopping cart of apple, banana and orange and the last option as checkout. It calculates total cost based on how many fruits are added 
+
+import java.util.*; 
+
+import java.io.*; 
+
+public class shopping { 
+
+    public static void main( String[]args ) 
+
+    { 
+
+        Scanner sc=new Scanner(System.in); 
+
+        double cost=0; 
+
+        int apple_quant=0; 
+
+        int banana_quant=0; 
+
+        int orange_quant=0; 
+
+        int totalquantity=0; 
+
+        System.out.println("Welcome to the Shopping Program!"); 
+
+        while (true) 
+
+        { 
+
+            System.out.println("\nAvailable items"); 
+
+            System.out.println("1.Apple \t- $0.50"); 
+
+            System.out.println("2.Banana\t- $0.25"); 
+
+            System.out.println("3.Orange\t- $0.75"); 
+
+            System.out.println("4.Checkout"); 
+
+            System.out.println("\n\nEnter your choice"); 
+
+            int c= sc.nextInt(); 
+
+            if((c<=3)&&(c>=1)) 
+
+            { 
+
+                System.out.println("Enter Quantity"); 
+
+                int q=sc.nextInt(); 
+
+                if(q==0) 
+
+                { 
+
+                    while(q==0) 
+
+                    { 
+
+                        System.out.println("Invalid quantity"); 
+
+                        q=sc.nextInt(); 
+
+                    } 
+
+                } 
+
+                if(c==1) 
+
+                { 
+
+                    cost+= 0.50*q; 
+
+                    apple_quant+=q; 
+
+                } 
+
+                else if(c==2) 
+
+                { 
+
+                    cost+= 0.25*q; 
+
+                    banana_quant+=q; 
+
+                } 
+
+                else if(c==3) 
+
+                { 
+
+                    cost+=0.75*q; 
+
+                    orange_quant+=q; 
+
+                } 
+
+                System.out.println("Item added to your cart"); 
+
+            } 
+
+            else if(c==4) 
+
+            { 
+
+                break; 
+
+            } 
+
+            else{ 
+
+                System.out.println("Invalid Choice.\nPlease Enter a valid choice"); 
+
+            } 
+
+        } 
+
+        totalquantity= apple_quant+banana_quant+orange_quant; 
+
+        System.out.println("\nItems in your cart :");         
+
+        if(apple_quant!=0) 
+
+        { 
+
+            System.out.println("Apple \tX"+apple_quant); 
+
+        } 
+
+        if(banana_quant!=0) 
+
+        { 
+
+            System.out.println("Banana\tX"+banana_quant); 
+
+        } 
+
+        if(orange_quant!=0) 
+
+        { 
+
+            System.out.println("Orange\tX"+orange_quant); 
+
+        } 
+
+        System.out.println("Total items in cart"+totalquantity+"\nTotal cost"+cost); 
+
+   }   
+
+} 
